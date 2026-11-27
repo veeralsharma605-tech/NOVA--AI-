@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100b1d">
+<meta name="description" content="NOVA AI — your personal hybrid AI assistant">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/style.css">
+<title>NOVA AI</title>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">N</div><span>NOVA AI</span></div>
+    <button class="new-chat" id="newChat">＋ New chat</button>
+    <div class="side-heading">RECENT CHATS</div>
+    <div id="history" class="history"></div>
+    <div class="side-bottom">
+      <div class="engine-dot" id="engineDot"></div>
+      <div><strong id="engineLabel">Checking AI engines…</strong><small id="engineDetail">Local and online status</small></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="top-left"><button id="menuBtn" class="icon-btn mobile-only">☰</button><span class="page-title">Assistant</span><span class="model-pill">✦ NOVA Hybrid</span></div>
+      <select id="mode" aria-label="AI mode"><option value="auto">Auto mode</option><option value="offline">Offline only</option><option value="online">Online only</option></select>
+    </header>
+    <section class="chat-area" id="chatArea">
+      <div class="welcome" id="welcome">
+        <div class="orb">✦</div>
+        <h1>Welcome to <span>NOVA AI</span></h1>
+        <p>Your ideas, questions and curiosity — all in one place.</p>
+        <div class="suggestions">
+          <button data-prompt="Explain a difficult topic in simple words.">✧ Explain a difficult topic</button>
+          <button data-prompt="Help me plan a productive day.">✧ Plan my day</button>
+          <button data-prompt="Give me three creative app ideas.">✧ Generate app ideas</button>
+          <button data-prompt="Teach me something interesting about science.">✧ Teach me something new</button>
+        </div>
+        <div class="setup-note">For real answers, start Ollama and install a local model. See README.txt.</div>
+      </div>
+      <div id="messages" class="messages"></div>
+    </section>
+    <footer class="composer-wrap">
+      <div class="composer">
+        <textarea id="prompt" rows="1" placeholder="Message NOVA AI…" aria-label="Message NOVA AI"></textarea>
+        <button id="sendBtn" class="send-btn" aria-label="Send message">↑</button>
+      </div>
+      <div class="disclaimer">Check important information. AI responses can make mistakes.</div>
+    </footer>
+  </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

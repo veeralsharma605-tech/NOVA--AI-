@@ -1,0 +1,10 @@
+{
+  "name": "NOVA AI",
+  "short_name": "NOVA",
+  "description": "Your personal hybrid AI assistant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#100b1d",
+  "theme_color": "#100b1d",
+  "icons": []
+}
